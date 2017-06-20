@@ -10,3 +10,4 @@
 `tmux.conf` -> `.tmux.conf`
 `vimrc` -> `.vimrc`
 `zshrc` -> `.zshrc`
+`bullet-train.zsh-theme` -> ~/.oh-my-zsh/themes/bullet-train.zsh-theme
