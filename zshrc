@@ -138,3 +138,15 @@ export GOPATH=~/repo/xxfiles/gofiles
 
 # thefuck
 eval $(thefuck --alias)
+
+
+# for bullet-train theme
+BULLETTRAIN_PROMPT_ORDER=(
+	context
+	virtualenv
+	status
+	dir
+	git
+	cmd_exec_time
+)
+BULLETTRAIN_CONTEXT_DEFAULT_USER=joshua
