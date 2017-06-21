@@ -13,6 +13,20 @@
 # The default configuration, that can be overwrite in your .zshrc file
 # ------------------------------------------------------------------------------
 
+
+# ------------------------------------------------------------------------------
+# custom
+BULLETTRAIN_CONTEXT_DEFAULT_USER=joshua
+BULLETTRAIN_PROMPT_ORDER=(
+	context
+	virtualenv
+	status
+	dir
+	git
+	cmd_exec_time
+)
+# ------------------------------------------------------------------------------
+
 VIRTUAL_ENV_DISABLE_PROMPT=true
 
 # Define order and content of prompt
@@ -235,17 +249,17 @@ else
   ZSH_THEME_GIT_PROMPT_ADDED=$BULLETTRAIN_GIT_ADDED
 fi
 if [ ! -n "${BULLETTRAIN_GIT_MODIFIED+1}" ]; then
-  ZSH_THEME_GIT_PROMPT_MODIFIED=" %F{blue}✹%F{black}"
+  ZSH_THEME_GIT_PROMPT_MODIFIED=" %F{blue}⚒%F{black}"
 else
   ZSH_THEME_GIT_PROMPT_MODIFIED=$BULLETTRAIN_GIT_MODIFIED
 fi
 if [ ! -n "${BULLETTRAIN_GIT_DELETED+1}" ]; then
-  ZSH_THEME_GIT_PROMPT_DELETED=" %F{red}✖%F{black}"
+  ZSH_THEME_GIT_PROMPT_DELETED=" %F{blue}✖%F{black}"
 else
   ZSH_THEME_GIT_PROMPT_DELETED=$BULLETTRAIN_GIT_DELETED
 fi
 if [ ! -n "${BULLETTRAIN_GIT_UNTRACKED+1}" ]; then
-  ZSH_THEME_GIT_PROMPT_UNTRACKED=" %F{red}✭%F{black}"
+  ZSH_THEME_GIT_PROMPT_UNTRACKED=" %F{blue}⚑%F{black}"
 else
   ZSH_THEME_GIT_PROMPT_UNTRACKED=$BULLETTRAIN_GIT_UNTRACKED
 fi
@@ -280,7 +294,7 @@ if [ ! -n "${BULLETTRAIN_EXEC_TIME_ELAPSED+1}" ]; then
   BULLETTRAIN_EXEC_TIME_ELAPSED=5
 fi
 if [ ! -n "${BULLETTRAIN_EXEC_TIME_BG+1}" ]; then
-  BULLETTRAIN_EXEC_TIME_BG=yellow
+  BULLETTRAIN_EXEC_TIME_BG=white
 fi
 if [ ! -n "${BULLETTRAIN_EXEC_TIME_FG+1}" ]; then
   BULLETTRAIN_EXEC_TIME_FG=black
