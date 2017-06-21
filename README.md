@@ -5,6 +5,7 @@
 * zsh
 * tmux
 * vim
+* bullet-train(oh-my-zsh主题的自定义)
 
 分别将三个配置文件重命名放到家目录
 `tmux.conf` -> `.tmux.conf`

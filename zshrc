@@ -2,13 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/joshua/.oh-my-zsh
+export ZSH=/home/joshua/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
 #ZSH_THEME="robbyrussell"
+ZSH_THEME="bullet-train"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -99,18 +100,19 @@ source /usr/local/bin/virtualenvwrapper.sh
 # mybin
 if [ -d "$HOME/.mybin" ]
 then
-    export PATH=~/.mybin:$PATH
+    export PATH=$HOME/.mybin:$PATH
 fi
 
 # pip
 eval "`pip completion --zsh`"
 
-export DEFAULT_USER="joshua"
+#export DEFAULT_USER="joshua"
 
 # git alias
 alias gits='git status'
 alias gita='git add'
 alias gitc='git commit'
+alias gitl='git log --graph'
 
 
 
@@ -139,14 +141,6 @@ export GOPATH=~/repo/xxfiles/gofiles
 # thefuck
 eval $(thefuck --alias)
 
-
-# for bullet-train theme
-BULLETTRAIN_PROMPT_ORDER=(
-	context
-	virtualenv
-	status
-	dir
-	git
-	cmd_exec_time
-)
-BULLETTRAIN_CONTEXT_DEFAULT_USER=joshua
+# set for node
+export NODE_HOME=/usr/local/node/6.11.0
+export PATH=$PATH:$NODE_HOME/bin
